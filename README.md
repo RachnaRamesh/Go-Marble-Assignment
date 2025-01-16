@@ -96,8 +96,7 @@ npm start
 ![WhatsApp Image 2025-01-16 at 23 54 11_96e72ede](https://github.com/user-attachments/assets/5bf3fd27-85d8-4a15-a4e8-7b44c3e713f7)
 
 ## **Output** 
-Running the script will display:
-Example - 
+Example of Output : 
 ```bash
 {
   "reviews_count": 5,
