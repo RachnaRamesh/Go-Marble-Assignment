@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universal Review Scraper</title>
+    <style>
+      /* Overall body styling */
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(to bottom right, #ffe3f4, #d5c9f9);
+        color: #4a154b;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+
+      /* Main container */
+      .container {
+        text-align: center;
+        background: #ffffff;
+        padding: 20px 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 400px;
+      }
+
+      /* Header styles */
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #4a154b;
+      }
+
+      /* Input fields styling */
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #d5c9f9;
+        border-radius: 8px;
+        font-size: 14px;
+        background-color: #fdf8ff;
+      }
+
+      input[type="text"]::placeholder,
+      textarea::placeholder {
+        color: #b197bc;
+      }
+
+      /* Button styling */
+      button {
+        background: linear-gradient(to right, #ff82d0, #d597f9);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: transform 0.2s, background-color 0.2s;
+      }
+
+      button:hover {
+        transform: scale(1.05);
+        background: linear-gradient(to right, #ff6bb7, #c583f3);
+      }
+
+      /* Results display styling */
+      pre {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #fdf8ff;
+        border: 1px solid #d5c9f9;
+        border-radius: 8px;
+        font-size: 14px;
+        text-align: left;
+        overflow: auto;
+        max-height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Universal Review Scraper</h1>
+      <form id="scraper-form">
+        <input
+          type="text"
+          id="url"
+          placeholder="Enter product page URL"
+          required
+        />
+        <textarea
+          id="selectors"
+          placeholder='Optional: {"reviewContainer": ".review", "title": ".title", "body": ".content", "rating": ".rating"}'
+        ></textarea>
+        <button type="submit">Scrape Reviews</button>
+      </form>
+      <pre id="results"></pre>
+    </div>
+
+    <script>
+      document
+        .getElementById("scraper-form")
+        .addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const url = document.getElementById("url").value;
+          const selectors = document.getElementById("selectors").value
+            ? JSON.parse(document.getElementById("selectors").value)
+            : null;
+
+          const response = await fetch("http://localhost:3000/api/reviews", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ url, selectors }),
+          });
+
+          const data = await response.json();
+          document.getElementById("results").innerText = JSON.stringify(
+            data,
+            null,
+            2
+          );
+        });
+    </script>
+  </body>
+</html>
