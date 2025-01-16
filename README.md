@@ -102,6 +102,34 @@ npm start
 - [Rachna Ramesh](https://github.com/RachnaRamesh)
 
 
+## **Output** 
+Running the script will display:
+```bash
+{
+  "reviews_count": 5,
+  "reviews": [
+    {
+      "title": "Great Product!",
+      "body": "I loved this product, highly recommend it!",
+      "reviewer": "John Doe",
+      "rating": "5 stars"
+    },
+    {
+      "title": "Not as expected",
+      "body": "The product quality was average. Expected more!",
+      "reviewer": "Jane Smith",
+      "rating": "3 stars"
+    },
+    {
+      "title": "Value for Money",
+      "body": "Best purchase at this price range.",
+      "reviewer": "Raj Kumar",
+      "rating": "4 stars"
+    }
+  ]
+}
+```
+
 
 ## 📜 **License**
 
