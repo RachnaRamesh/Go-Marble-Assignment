@@ -3,7 +3,7 @@
 > **A user-friendly tool to scrape and analyze reviews from any eCommerce product page.**  
 This project uses Node.js, Express, and Puppeteer to scrape reviews dynamically from product pages and display them on a clean frontend interface.
 
----
+
 
 ## 📋 Table of Contents
 - [📖 Overview](#-overview)
@@ -17,7 +17,7 @@ This project uses Node.js, Express, and Puppeteer to scrape reviews dynamically 
 - [📜 License](#-license)
 - [🛡️ Future Enhancements](#-future-enhancements)
 
----
+
 
 ## 📖 Overview
 
@@ -28,7 +28,7 @@ The **Universal Review Scraper** project enables users to scrape product reviews
 - ✅ Display results in a formatted and clean frontend.
 - ✅ Provide customizable scraping with optional CSS selectors.
 
----
+
 
 ## ✨ Features
 - 🌐 **Universal Support**: Works with multiple eCommerce platforms (Amazon, Flipkart, etc.).
@@ -36,14 +36,14 @@ The **Universal Review Scraper** project enables users to scrape product reviews
 - 🤖 **Dynamic Scraping**: Extracts reviews, ratings, and reviewer information using Puppeteer.
 - 📦 **Customizable Selectors**: Users can provide CSS selectors for specific websites.
 
----
+
 
 ## 🛠 Technologies Used
 - **Backend**: Node.js, Express
 - **Frontend**: HTML, CSS, JavaScript
 - **Web Scraping**: Puppeteer with Stealth Plugin
 
----
+
 
 ## ⚙️ Installation
 
@@ -61,9 +61,6 @@ npm install
 npm start
 ```
 
----
-
----
 
 ## 🚀 **Usage**
 
@@ -72,7 +69,7 @@ npm start
 3. (Optional) Add custom CSS selectors to extract specific review elements.
 4. Click **"Scrape Reviews"** to get the results.
 
----
+
 
 ## 📊 **Project Workflow**
 
@@ -87,7 +84,7 @@ npm start
 5. **Results Display**:
    - Reviews are displayed dynamically on the frontend.
 
----
+
 
 ### **System Architecture**
 ![WhatsApp Image 2025-01-16 at 23 50 52_27d427b7](https://github.com/user-attachments/assets/c15d8ebb-3be4-49a7-8ed4-8e5b19220312)
@@ -98,7 +95,6 @@ npm start
 ![WhatsApp Image 2025-01-16 at 23 54 11_96e72ede](https://github.com/user-attachments/assets/5bf3fd27-85d8-4a15-a4e8-7b44c3e713f7)
 
 
----
 
 ## 🤝 **Contributors**
 
