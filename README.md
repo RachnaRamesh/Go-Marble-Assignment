@@ -23,6 +23,7 @@ This project uses Node.js, Express, and Puppeteer to scrape reviews dynamically 
 
 The **Universal Review Scraper** project enables users to scrape product reviews from any eCommerce website by simply entering the product URL. It dynamically extracts reviews, ratings, and reviewer details using Puppeteer and displays them on a user-friendly frontend.
 
+
 ### Objectives:
 - ✅ Extract reviews dynamically from any product page.
 - ✅ Display results in a formatted and clean frontend.
